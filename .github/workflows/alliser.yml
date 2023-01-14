@@ -11,5 +11,5 @@ jobs:
     - uses: stscoundrel/alliser-action@v0.7.2
       name: Alliser action step
       with:
-        extensions: .ts
+        extensions: .ts,.snap
         folders: src,tests

@@ -12,6 +12,9 @@ module.exports = {
     es6: true,
     'jest/globals': true,
   },
+  globals: {
+    document: true,
+  },
   rules: {
     'import/extensions': 0,
     'import/no-unresolved': 0,
