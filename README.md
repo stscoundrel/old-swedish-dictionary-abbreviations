@@ -12,10 +12,24 @@ Related projects:
 
 `yarn add old-swedish-dictionary-abbreviations`
 
-##### Usage
+### Usage
+
+Find abbreviated works & authors:
 
 ```javascript
-// Your usage example here
+import { findWorksAndAuthors }  from 'old-swedish-dictionary-abbreviations'
+
+// Find abbreviations from content -> example is from definition of 'infödha'
+const content = 'L. - part. pret. infödder. 2) medfödd. " mäktogare är indföt onth än owanth got " GU C 20 (hand 2) s. 30. ib. 3) infödd. GU C 20 (hand 2) s. 30. nager jnrikes jnföder man STb 3: 331 (1497).';
+
+// Returns map of abbreviated works to meanings.
+const result = findWorksAndAuthors(content);
+
+console.log(result);
+// 'GU C 20' => 'Latinskt-Svenskt glossarium efter Cod. Ups. C 20. Utg. av E. Neuman. S 1--583. 1918--20, (hand 2) s. 1--169. 1938--42. SFSS.'
+// 'GU' => 'Glossarii Latino-Svethici specimen vetustum. E cod. mscr. Bibliothecæ Reg. Acad. Upsal. Diss. Ups. præs. J. H. Schröder. 1845.'
+// 'ST' => 'Själens Tröst. Utg. af G. E. Klemming. 1871--73.'
+
 ```
 
 ### About "Dictionary of Old Swedish"
